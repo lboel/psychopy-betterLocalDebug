@@ -9,11 +9,6 @@ from psychopy_betterLocalDebug import app
 app.secret_key = 'dev'
 resource_path = Path(__file__).parent
 GlobalPath =""
-def shutdown_server():
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()
 
 
 @app.route('/', methods=['GET', 'POST'])
