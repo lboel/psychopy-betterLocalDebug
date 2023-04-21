@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+psychopy_betterLocalDebug/__init__.py
+psychopy_betterLocalDebug/views.py
+psychopy_betterLocalDebug.egg-info/PKG-INFO
+psychopy_betterLocalDebug.egg-info/SOURCES.txt
+psychopy_betterLocalDebug.egg-info/dependency_links.txt
+psychopy_betterLocalDebug.egg-info/requires.txt
+psychopy_betterLocalDebug.egg-info/top_level.txt
