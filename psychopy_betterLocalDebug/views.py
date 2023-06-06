@@ -13,10 +13,15 @@ GlobalPath =""
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return "Please use 127.0.0.1:5000/add/EXPERIMENTPATH to start an experiment"
+    return """<form action="/add/" method="get">
+    <label for="Local Path">Path To Experiment:</label>
+    <input type="text" id="systemPath" name="systemPath"><br><br>
+    <button type="submit"> Start Experiment </button>
+  </form>"""
 
-@app.route('/add/<path:systemPath>', methods=['GET', 'POST'])
-def addExperiments(systemPath):
+@app.route('/add/', methods=['GET', 'POST'])
+def addExperiments():
+    systemPath= request.args.get('systemPath', default = "", type = str)
     session["path"] = systemPath
     return redirect(url_for('experiments', shortPath=os.path.basename(systemPath)+"/"))
 

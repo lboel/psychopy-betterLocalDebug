@@ -1,5 +1,5 @@
 MANIFEST.in
-README
+README.md
 setup.py
 psychopy_betterLocalDebug/__init__.py
 psychopy_betterLocalDebug/views.py
